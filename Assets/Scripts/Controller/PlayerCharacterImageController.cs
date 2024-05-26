@@ -20,7 +20,7 @@ public class PlayerCharacterImageController : CharacterImageController
     {
         controller.OnMoveEvent += Move;
         controller.OnMoveEvent += LookLotation;
-        nameText.text = DataManager.Instance.name;
+        nameText.text = DataManager.Instance.playerName;
     }
 
     private void Move(Vector2 vector)

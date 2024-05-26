@@ -5,7 +5,8 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
-    public string? name;
+    public string? playerName;
+    internal int choiceNum;
 
     private void Awake()
     {

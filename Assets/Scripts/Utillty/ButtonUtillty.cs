@@ -1,7 +1,12 @@
-﻿using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonUtillty : ButtonUI
 {
+    public Image SelectedCharacterImage;
+    public Sprite[] CharacterImages;
+
     public void ChangeStartSceneToMainScene()
     {
         if (tMP_InputField.text.Length >= 2 || tMP_InputField.text.Length >= 10)
@@ -18,11 +23,17 @@ public class ButtonUtillty : ButtonUI
     {
         if (tMP_InputField.text.Length <= 2 || tMP_InputField.text.Length <= 10)
         {
-            DataManager.Instance.name = tMP_InputField.text;
+            DataManager.Instance.playerName = tMP_InputField.text;
         }
         else
         {
             return;
         }
+    }
+
+    public void ChoiceCharacterImage(int num)
+    {
+        SelectedCharacterImage.sprite = CharacterImages[num];
+        DataManager.Instance.choiceNum = num;
     }
 }
