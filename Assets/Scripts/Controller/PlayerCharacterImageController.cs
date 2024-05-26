@@ -6,7 +6,7 @@ public class PlayerCharacterImageController : AnimationController
 
     private float magnituteThreshold = 0.1f;
 
-    private Vector2 idle = Vector2.zero;
+    private int idle = 0;
     private int lookLeft = -1;
     private int lookRight = 1;
 
@@ -29,7 +29,7 @@ public class PlayerCharacterImageController : AnimationController
 
     private void LookLotation(Vector2 direction)
     {
-        if(direction == idle) return;
+        if(direction.x == idle) return;
 
         else if(direction.x == lookLeft)
         {
