@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
         mainCamera = GetComponent<Camera>();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         Vector3 cameraPosition = new Vector3(cameraTarget.position.x, cameraTarget.position.y, -10);
         mainCamera.transform.position = cameraPosition;

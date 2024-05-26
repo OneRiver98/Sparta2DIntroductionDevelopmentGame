@@ -7,8 +7,8 @@ public class PlayerCharacterImageController : AnimationController
     private float magnituteThreshold = 0.1f;
 
     private int idle = 0;
-    private int lookLeft = -1;
-    private int lookRight = 1;
+    private int left = -1;
+    private int right = 1;
 
 
     protected override void Awake()
@@ -31,13 +31,13 @@ public class PlayerCharacterImageController : AnimationController
     {
         if(direction.x == idle) return;
 
-        else if(direction.x == lookLeft)
+        else if(direction.x == left)
         {
             if(characterSpriteRenderer.flipX) return;
             characterSpriteRenderer.flipX = true;
         }
 
-        else if(direction.x == lookRight)
+        else if(direction.x == right)
         {
             if(!characterSpriteRenderer.flipX) return;
             characterSpriteRenderer.flipX = false;
