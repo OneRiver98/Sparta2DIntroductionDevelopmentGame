@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerCharacterImageController : AnimationController
+public class PlayerCharacterImageController : CharacterImageController
 {
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
@@ -20,6 +20,7 @@ public class PlayerCharacterImageController : AnimationController
     {
         controller.OnMoveEvent += Move;
         controller.OnMoveEvent += LookLotation;
+        nameText.text = DataManager.Instance.name;
     }
 
     private void Move(Vector2 vector)

@@ -1,11 +1,13 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class AnimationController : MonoBehaviour
+public class CharacterImageController : MonoBehaviour
 {
     protected TopDownController controller;
     protected Animator Animator;
     protected SpriteRenderer characterSpriteRenderer;
+    public Text nameText;
 
     protected virtual void Awake()
     {
