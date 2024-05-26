@@ -4,7 +4,7 @@ public class ButtonUtillty : ButtonUI
 {
     public void ChangeStartSceneToMainScene()
     {
-        if (tMP_InputField.text.Length <= 2 || tMP_InputField.text.Length <= 10)
+        if (tMP_InputField.text.Length >= 2 || tMP_InputField.text.Length >= 10)
         {
             SceneManager.LoadScene("MainScene");
         }
