@@ -8,6 +8,7 @@ public class TopDownMovement : MonoBehaviour
 
     private Vector2 movementDirection = Vector2.zero;
 
+
     private void Awake()
     {
         movementController = GetComponent<TopDownController>();
@@ -21,7 +22,7 @@ public class TopDownMovement : MonoBehaviour
 
     private void Move(Vector2 direction)
     {
-        movementDirection = direction;
+        movementDirection = direction.normalized;
     }
 
     private void FixedUpdate()
